@@ -4,15 +4,17 @@ import { motion, Variants } from "framer-motion";
 import { ArrowDown, Download, Sparkles } from "lucide-react";
 import { Magnetic } from "@/components/ui/Magnetic";
 import { SplitText } from "@/components/ui/SplitText";
+import { SceneWrapper } from "@/components/3d/SceneWrapper";
 import { LINKS } from "@/data/resume";
 import { openChat } from "@/components/ui/ChatWidget";
 
 const item: Variants = { hidden: { y: 40, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 100, damping: 20 } } };
 
-export function HeroSection() {
+export function HeroSection({ chat }: { chat: boolean }) {
   return (
-    <section style={{ position: "relative", width: "100%", minHeight: "100vh", display: "flex", alignItems: "center", backgroundColor: "transparent" }}>
-      <div className="container" style={{ width: "100%", padding: "14vh 4vw 12vh", display: "grid", gridTemplateColumns: "minmax(0,1.2fr) minmax(0,.8fr)", gap: "4vw", alignItems: "center" }}>
+    <section style={{ position: "relative", width: "100%", minHeight: "100vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
+      <SceneWrapper />
+      <div className="container" style={{ position: "relative", zIndex: 1, width: "100%", padding: "14vh 4vw 12vh", display: "grid", gridTemplateColumns: "minmax(0,1.2fr) minmax(0,.8fr)", gap: "4vw", alignItems: "center" }}>
         <motion.div initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } } }} style={{ minWidth: 0 }}>
           <motion.div variants={item} style={{ display: "inline-flex", alignItems: "center", gap: 10, fontSize: ".72rem", letterSpacing: ".2em", fontWeight: 600, color: "#b7ab98", marginBottom: "3vh" }}>
             <span style={{ width: 9, height: 9, borderRadius: "50%", background: "#3ddc84", boxShadow: "0 0 0 4px #3ddc8433" }} />
@@ -29,17 +31,17 @@ export function HeroSection() {
           <div style={{ overflow: "hidden" }}><SplitText text="That Work." as="h1" className="split-heading" /></div>
 
           <motion.p variants={item} style={{ marginTop: "4vh", color: "#b7ab98", fontSize: "clamp(1rem, 1.4vw, 1.25rem)", lineHeight: 1.5, maxWidth: 520 }}>
-            Software engineer — AI/ML & agentic systems. Retrieval and ranking pipelines, LangGraph agents, and the pytest suites that keep them honest. 12 hackathons, 4 podiums.
+            Software engineer — AI/ML & agentic systems. Retrieval and ranking pipelines, LangGraph agents, and the pytest suites that keep them honest. 12+ hackathons and counting.
           </motion.p>
 
           <motion.div variants={item} style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "4vh" }}>
-            <Magnetic>
+            {chat && <Magnetic>
               <button onClick={openChat} data-cursor-hover="true" style={btn(true)}>
                 <Sparkles size={16} /> Ask my avatar
               </button>
-            </Magnetic>
+            </Magnetic>}
             <Magnetic>
-              <a href={LINKS.resume} download data-cursor-hover="true" style={btn(false)}>
+              <a href={LINKS.resume} download data-cursor-hover="true" style={btn(chat ? false : true)}>
                 <Download size={16} /> Resume
               </a>
             </Magnetic>

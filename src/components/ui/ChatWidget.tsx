@@ -6,7 +6,7 @@ import { Sparkles, X, ArrowUp } from "lucide-react";
 import { LINKS } from "@/data/resume";
 
 type Msg = { role: "user" | "assistant"; content: string };
-const SUGGESTIONS = ["What are her strongest projects?", "Tell me about her hackathon wins", "Is she a fit for a backend AI role?", "How does Silent Flood work?"];
+const SUGGESTIONS = ["What are her strongest projects?", "Tell me about her hackathon highlights", "Is she a fit for a backend AI role?", "How does Silent Flood work?"];
 const HELLO: Msg = { role: "assistant", content: "Hi! I know Roshni's projects, experience and hackathon record. What would you like to know?" };
 
 // Any component can open the chat: openChat() from a button, or the floating pill.

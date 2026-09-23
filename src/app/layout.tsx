@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 import "./globals.css";
-import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { ChatWidget } from "@/components/ui/ChatWidget";
 
@@ -12,10 +11,10 @@ const SITE = "https://roshnikobula.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: "Roshni Kobula Raja — Software Engineer, AI & Agentic Systems",
-  description: "Software engineer building agentic AI systems, RAG pipelines and tested backends. 12 hackathons, 4 wins.",
+  description: "Software engineer building agentic AI systems, RAG pipelines and tested backends. 12+ hackathons.",
   openGraph: {
     title: "Roshni Kobula Raja — Shipping agents that actually work",
-    description: "Software engineer · AI/ML & agentic systems · 12 hackathons, 4 wins.",
+    description: "Software engineer · AI/ML & agentic systems · 12+ hackathons.",
     url: SITE,
     images: ["/og.png"],
     type: "website",
@@ -30,11 +29,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body className={`${font.variable} antialiased`} style={{ fontFamily: "var(--font-sans), system-ui, sans-serif" }}>
-        <SmoothScroll>
-          <CustomCursor />
-          {children}
-          <ChatWidget />
-        </SmoothScroll>
+        <CustomCursor />
+        {children}
+        {!!process.env.ANTHROPIC_API_KEY && <ChatWidget />}
       </body>
     </html>
   );

@@ -13,7 +13,7 @@ const socials = [
   { icon: FileDown, label: "Resume", sub: "One page, PDF", href: LINKS.resume, download: true },
 ];
 
-export function ContactSection() {
+export function ContactSection({ chat }: { chat: boolean }) {
   return (
     <section id="contact" className="section" style={{ borderTop: "1px solid #2a2620", padding: "12vw 4vw" }}>
       <div className="container" style={{ display: "flex", flexWrap: "wrap", gap: "8vw" }}>
@@ -22,13 +22,13 @@ export function ContactSection() {
             Let&rsquo;s<br /><span style={{ color: "#e8a33b" }}>Talk.</span>
           </h2>
           <p style={{ color: "#b7ab98", fontSize: "clamp(1.1rem, 1.6vw, 1.5rem)", lineHeight: 1.4, maxWidth: 560, marginBottom: "3rem" }}>
-            Hiring for AI engineering, backend or ML? Ask the avatar first, then email — my inbox is open.
+            Hiring for AI engineering, backend or ML? Email me, my inbox is open.
           </p>
-          <Magnetic>
+          {chat && <Magnetic>
             <button onClick={openChat} data-cursor-hover="true" style={{ display: "inline-flex", alignItems: "center", gap: ".5rem", background: "#e8a33b", color: "#0d0d0d", border: 0, fontWeight: 800, letterSpacing: ".12em", fontSize: ".8rem", padding: ".9rem 1.6rem", borderRadius: 999, cursor: "pointer", fontFamily: "inherit" }}>
               <Sparkles size={16} /> ASK MY AVATAR
             </button>
-          </Magnetic>
+          </Magnetic>}
         </motion.div>
 
         <div style={{ flex: "1 1 40%", minWidth: 300, display: "flex", flexDirection: "column" }}>

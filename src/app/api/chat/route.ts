@@ -34,16 +34,27 @@ export function validate(body: unknown): string | null {
 
 const json = (status: number, error: string) => Response.json({ error }, { status });
 
+// ponytail: in-memory per-IP limit, 20 requests per 10 minutes. Resets when the serverless instance recycles;
+// move to Vercel KV / Upstash if abuse ever outlives an instance.
+const hits = new Map<string, number[]>();
+function limited(ip: string) {
+  const now = Date.now(), win = now - 10 * 60_000;
+  const arr = (hits.get(ip) ?? []).filter((t) => t > win);
+  arr.push(now); hits.set(ip, arr);
+  if (hits.size > 5000) hits.clear();
+  return arr.length > 20;
+}
+
 export async function POST(req: Request) {
   const body = await req.json().catch(() => null);
   const bad = validate(body);
   if (bad) return json(400, bad);
+  if (limited(req.headers.get("x-forwarded-for")?.split(",")[0].trim() || "local")) return json(429, "That's a lot of questions from one place. Try again in a few minutes, or email roshnikobular02@gmail.com.");
   if (!process.env.ANTHROPIC_API_KEY) return json(503, "The chatbot isn't switched on yet (no API key configured).");
 
   const messages: Msg[] = (body as { messages: Msg[] }).messages.map(({ role, content }) => ({ role, content }));
   const client = new Anthropic();
   try {
-    // ponytail: no per-visitor rate limit — the ceiling is the spend cap on the API key. Add Vercel Firewall rate limiting on /api/chat if abused.
     const stream = client.beta.messages.stream({
       model: MODEL,
       max_tokens: 1200,

@@ -7,7 +7,7 @@ Contact: roshnikobular02@gmail.com · linkedin.com/in/roshni-kobula-raja · gith
 Resume: downloadable from the "Download Resume" button on this site.
 
 ## Story
-Grew up in India, did her B.Tech in Chennai, then moved to New York in January 2024 for her Master's — her first long stretch away from home. Worked part-time through the degree to support herself. Graduated MS Computer Science from Binghamton University (SUNY, Watson College) in May 2026. Moved to the Bay Area and has spent most weekends since at San Francisco hackathons: 12 hackathons attended, 4 wins. Motto: "Build fast. Learn faster."
+Grew up in India, did her B.Tech in Chennai, then moved to New York in January 2024 for her Master's — her first long stretch away from home. Worked part-time through the degree to support herself. Graduated MS Computer Science from Binghamton University (SUNY, Watson College) in May 2026. Moved to the Bay Area and has spent most weekends since at San Francisco hackathons: 12+ hackathons attended; awards at three of them (see Hackathon highlights). Motto: "Build fast. Learn faster."
 She likes problems with a real person at the end of them — accessibility, disaster warning, knowledge that would otherwise be lost. She debugs to root cause and leaves tests behind.
 
 ## Education
@@ -25,7 +25,7 @@ She likes problems with a real person at the end of them — accessibility, disa
 ### AI/ML Intern — University of Texas at Dallas (Jun 2022 – Aug 2022)
 - Music-genre classification with K-Nearest Neighbors and scikit-learn, 82% accuracy on GTZAN. MFCC feature extraction with Librosa and NumPy; model-evaluation pipeline.
 
-## Hackathon wins
+## Hackathon highlights
 - Best Product AND Best Use of Aria — CoreWeave Hacks: Agent Loops (Weights & Biases, TypeSafe AI, AGI House), Sep 2026 — project: Arian OS.
 - Special Mention, Qualcomm track — AI Infra Summit Hackathon, Santa Clara, Sep 15–17 2026 — project: PEMA. Her first Physical AI hackathon; she also competed in the Intel track the same weekend.
 - 2nd Place — Better Days Hackathon (ClickHouse × LibreChat), San Francisco, Aug 2026 — project: Silent Flood.

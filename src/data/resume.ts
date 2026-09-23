@@ -49,11 +49,10 @@ export const education = [
   { when: "May 2024", title: "B.Tech Information Technology", org: "Rajalakshmi Engineering College, Chennai", note: "GPA 8.62/10. DSA, Networks, DBMS, Operating Systems, Software Testing." },
 ];
 
-export const wins = [
-  { when: "Sep 2026", icon: "🏆", title: "Best Product", body: "CoreWeave Hacks: Agent Loops (Weights & Biases, TypeSafe AI, AGI House) — Arian OS." },
-  { when: "Sep 2026", icon: "🏆", title: "Best Use of Aria", body: "Same event, second award — agent traces and run comparison with Aria on Arian OS." },
-  { when: "Aug 2026", icon: "🥈", title: "2nd Place", body: "Better Days Hackathon (ClickHouse × LibreChat), San Francisco — Silent Flood. Her idea; team formed that morning." },
-  { when: "Sep 2026", icon: "★", title: "Special Mention, Qualcomm Track", body: "AI Infra Summit Hackathon, Santa Clara — PEMA. First Physical AI hackathon." },
+export const highlights = [
+  { slug: "arian-os", award: "Best Product and Best Use of Aria", title: "CoreWeave Hacks: Agent Loops", body: "We built Arian OS, agents that read a published ML paper and keep experimenting until a chosen metric improves. Two awards at one event, September 2026." },
+  { slug: "silent-flood", award: "Second place", title: "Better Days Hackathon", body: "We built an early warning system that tracks how quickly river levels rise instead of waiting for rain. ClickHouse and LibreChat hosted it in San Francisco, August 2026." },
+  { slug: "pema", award: "Special mention, Qualcomm track", title: "AI Infra Summit Hackathon", body: "We built PEMA, an on-device assistant that remembers where objects were last seen for people with low vision or memory loss. Santa Clara, September 2026." },
 ];
 
 export const certs = [

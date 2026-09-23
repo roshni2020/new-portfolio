@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function SplitText({ text, as = "h2", className = "" }: { text: string; as?: any; className?: string }) {
+export function SplitText({ text, as = "h2", className = "" }: { text: string; as?: "h1" | "h2" | "h3" | "p"; className?: string }) {
   const textRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
