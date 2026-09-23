@@ -8,6 +8,9 @@ export interface Project {
   thumbnail: string;
   videoUrl?: string;
   award?: string;
+  status: "Completed" | "In development";
+  role: string;   // e.g. "Hackathon project", "Independent project"
+  when: string;   // human dates
   problemStatement: string;
   techDecisions: string;
   results: string;
@@ -18,6 +21,9 @@ const gh = (r: string) => `https://github.com/roshni2020/${r}`;
 export const projects: Project[] = [
   {
     slug: "evidpath",
+    status: "Completed",
+    role: "Graduate Assistant project",
+    when: "Jan 2026 – May 2026",
     title: "EvidPath",
     description: "AI career-planning platform: RAG resume analysis and skill-gap scoring across 205 role pathways.",
     techStack: ["Python", "FastAPI", "GraphQL", "React", "TypeScript", "BERT", "RAG", "AWS EC2", "Docker", "pytest"],
@@ -30,6 +36,9 @@ export const projects: Project[] = [
   },
   {
     slug: "silent-flood",
+    status: "Completed",
+    role: "Hackathon project",
+    when: "Aug 2026",
     title: "Silent Flood",
     description: "Detects a flood by how fast the river is rising, not by whether it is raining.",
     techStack: ["PostgreSQL triggers", "ClickHouse", "Python", "MCP", "LibreChat", "Docker"],
@@ -42,6 +51,9 @@ export const projects: Project[] = [
   },
   {
     slug: "arian-os",
+    status: "Completed",
+    role: "Hackathon project",
+    when: "Sep 2026",
     title: "Arian OS",
     description: "Agents that read a published ML paper and keep iterating until your metric improves.",
     techStack: ["Multi-agent loops", "W&B Weave", "Aria", "Hugging Face", "Python"],
@@ -53,6 +65,9 @@ export const projects: Project[] = [
   },
   {
     slug: "variantcourt",
+    status: "Completed",
+    role: "Hackathon project",
+    when: "Sep 2026",
     title: "VariantCourt",
     description: "An AI courtroom for DNA variant interpretation, where a rule engine — not an LLM — gives the verdict.",
     techStack: ["FastAPI", "Nuxt 4", "TypeSafe AI", "W&B Weave", "marimo", "pytest"],
@@ -65,6 +80,9 @@ export const projects: Project[] = [
   },
   {
     slug: "successor",
+    status: "Completed",
+    role: "Hackathon project",
+    when: "Jul 2026 – Aug 2026",
     title: "Successor",
     description: "Voice-based knowledge capture for semiconductor fab operations.",
     techStack: ["MongoDB Atlas", "Vector Search", "RRF", "LangGraph", "ElevenLabs", "FastAPI", "React"],
@@ -77,6 +95,9 @@ export const projects: Project[] = [
   },
   {
     slug: "civictrace-sf",
+    status: "Completed",
+    role: "Hackathon project",
+    when: "Jul 2026",
     title: "CivicTrace SF",
     description: "Government meeting video → a Neo4j knowledge graph that catches contradictions.",
     techStack: ["TypeScript", "Neo4j", "OpenAI", "TwelveLabs", "Strands Agents", "Playwright", "Docker"],
@@ -88,6 +109,9 @@ export const projects: Project[] = [
   },
   {
     slug: "pema",
+    status: "Completed",
+    role: "Hackathon project",
+    when: "Sep 2026",
     title: "PEMA",
     description: "Personal Environmental Memory Agent — Physical AI that remembers where things are.",
     techStack: ["Qualcomm GenieX", "On-device AI", "Python", "Arduino / STM32", "VLA models"],
@@ -100,6 +124,9 @@ export const projects: Project[] = [
   },
   {
     slug: "echoloop",
+    status: "Completed",
+    role: "Hackathon project",
+    when: "Sep 2026",
     title: "EchoLoop",
     description: "You don't learn how to talk to the AI. The AI learns how you communicate.",
     techStack: ["Python", "Multi-agent", "Speech recognition", "Vision", "Slack", "Vercel"],
@@ -113,6 +140,9 @@ export const projects: Project[] = [
   },
   {
     slug: "cloudvault-lite",
+    status: "Completed",
+    role: "Independent project",
+    when: "May 2026 – Jul 2026",
     title: "CloudVault Lite",
     description: "A deduplicating, content-addressable storage engine in C++.",
     techStack: ["C++", "SHA-256", "SQLite", "Concurrency"],
@@ -123,6 +153,9 @@ export const projects: Project[] = [
   },
   {
     slug: "clearform",
+    status: "Completed",
+    role: "Hackathon project",
+    when: "Sep 2026",
     title: "ClearForm + Readback",
     description: "Voice-first document completion for blind and low-vision users.",
     techStack: ["Next.js", "TypeScript", "ElevenLabs", "Linkup", "pdf-lib"],
@@ -135,6 +168,9 @@ export const projects: Project[] = [
   },
   {
     slug: "ate-yield-tracker",
+    status: "In development",
+    role: "Independent project",
+    when: "Apr 2026 – present",
     title: "ATE Yield Tracker",
     description: "ATE log analysis and PCB yield tracking for manufacturing test engineering.",
     techStack: ["Python", "pandas", "SQLite", "pytest", "PDF reports"],
@@ -146,13 +182,43 @@ export const projects: Project[] = [
   },
   {
     slug: "cctv-anomaly",
+    status: "Completed",
+    role: "Independent project",
+    when: "Nov 2025 – Dec 2025",
     title: "CCTV Anomaly Detection",
-    description: "An LSTM that flags shoplifting and loitering in surveillance video.",
+    description: "An LSTM pipeline that classifies shoplifting, robbery and explosions in short CCTV clips and files an incident report.",
     techStack: ["TensorFlow/Keras", "LSTM", "OpenCV", "Streamlit"],
     repoLink: gh("Anomaly-Detection-in-CCTV-Footage"),
     thumbnail: "/thumbs/cctv-anomaly.jpg",
-    problemStatement: "Manually monitoring CCTV footage for suspicious activity is slow and misses things.",
-    techDecisions: "Collected and annotated a surveillance dataset, extracted temporal features from frame sequences with OpenCV, and trained an LSTM in TensorFlow/Keras to separate normal behaviour from anomalies on an imbalanced dataset. Deployed via Streamlit with a real-time alert mechanism.",
-    results: "92% accuracy at 2.5 seconds per video segment.",
+    problemStatement: "Manual monitoring of CCTV footage for suspicious activity is time-consuming and requires constant human attention.",
+    techDecisions: "Collected and annotated a surveillance dataset, extracted temporal features from frame sequences with OpenCV, and trained an LSTM in TensorFlow/Keras to classify short clips as normal, shoplifting, robbery or explosion on an imbalanced dataset. Deployed via Streamlit with automated incident reporting.",
+    results: "92% accuracy at 2.5 seconds per video segment, with an automated report for every flagged incident.",
+  },
+  {
+    slug: "warzone-sentiment",
+    status: "Completed",
+    role: "Group project, final year",
+    when: "Dec 2024 – Mar 2025",
+    title: "Warzone Tweet Sentiment",
+    description: "Multi-model sentiment classifier tracking public opinion on the Russia–Ukraine conflict at 94% accuracy.",
+    techStack: ["Twitter API", "VADER", "TF-IDF", "Logistic Regression", "Random Forest", "Naive Bayes", "Streamlit", "Python"],
+    repoLink: gh("final-year-project--rec"),
+    thumbnail: "/thumbs/warzone-sentiment.jpg",
+    problemStatement: "We needed to track real-time public opinion and sentiment trends about the Russia–Ukraine conflict from social media.",
+    techDecisions: "Collected and preprocessed tweets through the Twitter API, used VADER for initial labelling and TF-IDF for features, then trained and tuned Logistic Regression, Random Forest and Naive Bayes classifiers and compared them. Models were serialised with Pickle behind an interactive Streamlit dashboard that tracks sentiment polarity over time.",
+    results: "94% accuracy on the test set. The dashboard tracks polarity trends over time for real-time public-opinion analysis.",
+  },
+  {
+    slug: "flipkart-bot",
+    status: "Completed",
+    role: "Independent project",
+    when: "Aug 2025 – Sep 2025",
+    title: "Flipkart Data Bot",
+    description: "An unattended UiPath RPA bot that extracts structured product data from Flipkart into Excel.",
+    techStack: ["UiPath", "RPA", "Excel automation", "Web scraping"],
+    thumbnail: "/thumbs/flipkart-bot.jpg",
+    problemStatement: "Manual product data extraction from e-commerce platforms is time-consuming, error-prone, and hard to scale for competitive analysis and market research.",
+    techDecisions: "An unattended UiPath bot accepts dynamic search input, navigates the Flipkart UI, scrapes product name, price, discount and specifications, validates the output against live results, and exports a formatted Excel report.",
+    results: "The full extraction workflow runs unattended end to end, handles dynamic inputs reliably, and eliminates manual extraction.",
   },
 ];

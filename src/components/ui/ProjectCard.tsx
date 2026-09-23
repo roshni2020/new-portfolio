@@ -25,10 +25,14 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       </div>
 
       <div style={{ flex: "1 1 45%", display: "flex", flexDirection: "column", gap: "1.5vh" }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: "1rem" }}>
+        <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: ".6rem 1rem" }}>
           <span style={{ color: "#e8a33b", fontWeight: 800, fontSize: ".85rem", letterSpacing: ".2em" }}>{String(index + 1).padStart(2, "0")}</span>
-          {project.award && <span style={{ color: "#e8a33b", fontSize: ".75rem", letterSpacing: ".15em", textTransform: "uppercase", fontWeight: 600 }}>{project.award}</span>}
+          <span style={{ fontSize: ".7rem", letterSpacing: ".12em", textTransform: "uppercase", fontWeight: 700, padding: ".25rem .7rem", borderRadius: 999, background: project.status === "Completed" ? "#3ddc8422" : "#e8a33b22", color: project.status === "Completed" ? "#3ddc84" : "#e8a33b" }}>
+            {project.status === "Completed" ? "✓ Completed" : "⚡ In development"}
+          </span>
+          <span style={{ color: "#b7ab98", fontSize: ".8rem" }}>{project.role} · {project.when}</span>
         </div>
+        {project.award && <div style={{ color: "#e8a33b", fontSize: ".75rem", letterSpacing: ".15em", textTransform: "uppercase", fontWeight: 600 }}>{project.award}</div>}
         <Link href={href} style={{ textDecoration: "none" }}>
           <motion.h3 style={{ fontSize: "clamp(1.8rem, 3.6vw, 3.6rem)", fontWeight: 800, color: "#ededed", lineHeight: 1, letterSpacing: "-0.02em", display: "flex", alignItems: "center", gap: "1rem", textTransform: "uppercase" }}
             animate={{ x: hover ? (even ? 10 : -10) : 0 }} transition={{ duration: 0.4 }}>

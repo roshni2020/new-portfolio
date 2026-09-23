@@ -45,7 +45,7 @@ She likes problems with a real person at the end of them — accessibility, disa
 - **HelpLoop**: live community map matching people to food assistance; Linkup verifies resources, Nebius ranks, Convex realtime. Live: helploop-one.vercel.app
 - **ATE Yield Tracker**: Python tool parsing ATE test logs, classifying PCB failure modes (opens/shorts/parametric), yield KPIs, PDF reports, SQLite traceability. 150 boards, 3 board types, 18 pytest cases.
 - **CCTV Anomaly Detection**: LSTM (TensorFlow/Keras, OpenCV) flagging shoplifting/loitering; 92% accuracy, 2.5 s per segment; Streamlit.
-- **Warzone Tweet Sentiment** (final-year group project): VADER + TF-IDF + Logistic Regression / Random Forest / Naive Bayes; 94% accuracy; Streamlit dashboard.
+- **Warzone Tweet Sentiment** (final-year group project, Dec 2024 – Mar 2025): VADER + TF-IDF + Logistic Regression / Random Forest / Naive Bayes; 94% accuracy; Streamlit dashboard.
 - Smaller: StudyGPS (study planner, FastAPI + React + OpenAI), SceneDNA (which film scenes lose viewers), Flipkart product-data RPA bot (UiPath).
 
 ## Skills

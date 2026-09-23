@@ -139,6 +139,15 @@ export function ProjectClient({ project }: { project: Project }) {
               </Link>
             </Magnetic>
 
+            <dl style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: ".6rem 1.2rem", fontSize: ".95rem", borderTop: "1px solid #2a2620", borderBottom: "1px solid #2a2620", padding: "1.2rem 0" }}>
+              {([["Status", project.status === "Completed" ? "✓ Completed" : "⚡ In development"], ["Role", project.role], ["Timeline", project.when], ...(project.award ? [["Recognition", project.award]] : [])] as [string, string][]).map(([k, v]) => (
+                <div key={k} style={{ display: "contents" }}>
+                  <dt style={{ color: "#e8a33b", fontWeight: 700, letterSpacing: ".15em", fontSize: ".72rem", textTransform: "uppercase", paddingTop: 3 }}>{k}</dt>
+                  <dd style={{ color: "#ededed", margin: 0 }}>{v}</dd>
+                </div>
+              ))}
+            </dl>
+
             <div>
               <h3
                 style={{
@@ -247,7 +256,7 @@ export function ProjectClient({ project }: { project: Project }) {
                 color: "#e8a33b",
               }}
             >
-              The Challenge
+              Problem
             </h2>
             <p
               style={{
@@ -274,7 +283,7 @@ export function ProjectClient({ project }: { project: Project }) {
                 color: "#ededed",
               }}
             >
-              Technical Decisions
+              Approach
             </h2>
             <p
               style={{
