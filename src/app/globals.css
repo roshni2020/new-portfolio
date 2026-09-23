@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@source "../components";
+@source "../lib";
+@source "../app";
+
+@theme {
+  --color-background: #0d0d0d;
+  --color-foreground: #ededed;
+  --color-primary: #e8a33b;
+  --color-primary-foreground: #0d0d0d;
+  --color-muted: #1a1815;
+  --color-muted-foreground: #b7ab98;
+  --color-accent: #2a2620;
+  --color-accent-foreground: #ffffff;
+  --color-border: #2a2620;
+}
+
+:root {
+  --background: #0d0d0d;
+  --foreground: #ededed;
+  --primary: #e8a33b;
+  --primary-foreground: #0d0d0d;
+  --muted: #1a1815;
+  --muted-foreground: #b7ab98;
+  --accent: #2a2620;
+  --accent-foreground: #ffffff;
+  --border: #2a2620;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: clamp(15px, 0.55vw + 10px, 20px); }
+html[data-scroll-behavior="smooth"] { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@media (pointer: fine) { body, a, button { cursor: none !important; } }
+
+::selection { background-color: var(--primary); color: var(--primary-foreground); }
+
+.split-heading, .split-heading-accent {
+  font-size: clamp(2.6rem, 8.5vw, 9rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.split-heading { color: var(--foreground); }
+.split-heading-accent { color: var(--primary); }
+
+.eyebrow {
+  display: flex; align-items: center; gap: 1rem;
+  color: var(--primary); font-weight: 600; letter-spacing: 0.3em; font-size: 0.75rem; text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+.eyebrow::before { content: ""; width: 40px; height: 1px; background: var(--primary); }
+
+.chip {
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--muted-foreground); border: 1px solid var(--border);
+  padding: 0.3rem 0.8rem; border-radius: 999px;
+}
+
+.section { background: var(--background); padding: 10vw 4vw; position: relative; z-index: 20; }
+.container { max-width: 1600px; margin: 0 auto; }
