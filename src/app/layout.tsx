@@ -10,10 +10,10 @@ const SITE = "https://roshnikobula.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: "Roshni Kobula Raja — Software Engineer, AI & Agentic Systems",
+  title: "Roshni Kobula Raja | Software Engineer, AI & Agentic Systems",
   description: "Software engineer building agentic AI systems, RAG pipelines and tested backends. 5× hackathon winner.",
   openGraph: {
-    title: "Roshni Kobula Raja — Shipping agents that actually work",
+    title: "Roshni Kobula Raja | Shipping agents that actually work",
     description: "Software engineer · AI/ML & agentic systems · 5× hackathon winner.",
     url: SITE,
     images: ["/og.png"],

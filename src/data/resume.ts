@@ -7,7 +7,7 @@ export const LINKS = {
 
 export const experience = [
   {
-    when: "Aug 2025 — May 2026",
+    when: "Aug 2025 – May 2026",
     role: "Graduate Assistant",
     org: "Binghamton University, SUNY",
     where: "Binghamton, NY",
@@ -19,7 +19,7 @@ export const experience = [
     tags: ["Agentic AI", "Prompt engineering", "RAG", "Python", "Stakeholder testing"],
   },
   {
-    when: "Jun 2023 — Dec 2023",
+    when: "Jun 2023 – Dec 2023",
     role: "Data Analyst Intern",
     org: "Kanini",
     where: "Chennai, India",
@@ -31,7 +31,7 @@ export const experience = [
     tags: ["Django", "Flask", "PyTorch", "BERT", "SVM", "REST APIs"],
   },
   {
-    when: "Jun 2022 — Aug 2022",
+    when: "Jun 2022 – Aug 2022",
     role: "AI/ML Intern",
     org: "University of Texas at Dallas",
     where: "Dallas, TX",
@@ -51,6 +51,7 @@ export const education = [
 
 export const highlights = [
   { slug: "arian-os", award: "Best Product and Best Use of Aria", title: "CoreWeave Hacks: Agent Loops", body: "We built Arian OS, agents that read a published ML paper and keep experimenting until a chosen metric improves. Two awards at one event, September 2026." },
+  { slug: "helploop", award: "Track winner", title: "Burning Token global hackathon", body: "We built HelpLoop, a live community map that researches food assistance, ranks the best match with AI, and connects volunteers in real time. NERDCONF, San Francisco and online, September 2026." },
   { slug: "silent-flood", award: "Second place", title: "Better Days Hackathon", body: "We built an early warning system that tracks how quickly river levels rise instead of waiting for rain. ClickHouse and LibreChat hosted it in San Francisco, August 2026." },
   { slug: "pema", award: "Special mention, Qualcomm track", title: "AI Infra Summit Hackathon", body: "We built PEMA, an on-device assistant that remembers where objects were last seen for people with low vision or memory loss. Santa Clara, September 2026." },
 ];

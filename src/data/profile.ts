@@ -7,7 +7,7 @@ Contact: roshnikobular02@gmail.com · linkedin.com/in/roshni-kobula-raja · gith
 Resume: downloadable from the "Download Resume" button on this site.
 
 ## Story
-Grew up in India, did her B.Tech in Chennai, then moved to New York in January 2024 for her Master's — her first long stretch away from home. Worked part-time through the degree to support herself. Graduated MS Computer Science from Binghamton University (SUNY, Watson College) in May 2026. Moved to the Bay Area and has spent most weekends since at San Francisco hackathons: 12+ hackathons attended; five-time hackathon winner (highlights below). Motto: "Build fast. Learn faster."
+Grew up in India, did her B.Tech in Chennai, then moved to New York in January 2024 for her Master's — her first long stretch away from home. Worked part-time through the degree to support herself. Graduated MS Computer Science from Binghamton University (SUNY, Watson College) in May 2026. Moved to the Bay Area and has spent most weekends since at San Francisco hackathons: 20+ hackathons attended; five-time hackathon winner (highlights below). Motto: "Build fast. Learn faster."
 She likes problems with a real person at the end of them — accessibility, disaster warning, knowledge that would otherwise be lost. She debugs to root cause and leaves tests behind.
 
 ## Education
@@ -28,6 +28,7 @@ She likes problems with a real person at the end of them — accessibility, disa
 ## Hackathon highlights
 - Best Product AND Best Use of Aria — CoreWeave Hacks: Agent Loops (Weights & Biases, TypeSafe AI, AGI House), Sep 2026 — project: Arian OS.
 - Special Mention, Qualcomm track — AI Infra Summit Hackathon, Santa Clara, Sep 15–17 2026 — project: PEMA. Her first Physical AI hackathon; she also competed in the Intel track the same weekend.
+- Track winner — Burning Token global hackathon (NERDCONF; San Francisco + online), Sep 2026 — project: HelpLoop.
 - 2nd Place — Better Days Hackathon (ClickHouse × LibreChat), San Francisco, Aug 2026 — project: Silent Flood.
 - Also took part in MongoDB Build Fest (Persistent Context Sprint) — no prize, built Successor.
 
@@ -42,7 +43,7 @@ She likes problems with a real person at the end of them — accessibility, disa
 - **EchoLoop**: multi-agent assistant for people who know what they want to say but can't always finish the sentence (autism, aphasia, AAC users). Hears the fragment, looks at the room, remembers past confirmations, proposes 2–4 sentences; only speaks or sends to a caregiver's Slack after the person confirms. Lemma × Comma Capital hackathon, Sep 2026. Live: auteciia.vercel.app
 - **CloudVault Lite** (May–Jul 2026): C++ content-addressable dedup storage engine using SHA-256. Root-caused a TOCTOU race in SQLite transactions and scaled concurrent uploads to 4 workers.
 - **ClearForm / Readback**: voice-first document completion for blind and low-vision users. Every spoken value is read back and confirmed; low-confidence values are marked "Needs review", never guessed; signatures never completed; nothing stored. Next.js, ElevenLabs, Linkup. Live: clearform-three.vercel.app
-- **HelpLoop**: live community map matching people to food assistance; Linkup verifies resources, Nebius ranks, Convex realtime. Live: helploop-one.vercel.app · Code: github.com/roshni2020/HelpLoop
+- **HelpLoop**: live community map matching people to food assistance; Linkup verifies resources, Nebius ranks, Convex realtime. Track winner at Burning Token (Sep 2026). Live: helploop-one.vercel.app · Code: github.com/roshni2020/HelpLoop
 - **SwitchProof** (Agent Arena hackathon, Vultr × NetBird, Sep 2026): AI agents that test a bank's new payment switch against the old one before go-live. Agents write ISO 8583 tests, a human approves each one, tests run in throwaway gVisor Kubernetes Jobs on Vultr. 10,022 tests in 42 sandboxes; caught a seeded duplicate-charge bug and found its boundary. Code: github.com/roshni2020/Costguard-
 - **ATE Yield Tracker**: Python tool parsing ATE test logs, classifying PCB failure modes (opens/shorts/parametric), yield KPIs, PDF reports, SQLite traceability. 150 boards, 3 board types, 18 pytest cases.
 - **CCTV Anomaly Detection**: LSTM (TensorFlow/Keras, OpenCV) flagging shoplifting/loitering; 92% accuracy, 2.5 s per segment; Streamlit.

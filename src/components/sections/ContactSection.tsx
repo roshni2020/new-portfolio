@@ -7,8 +7,8 @@ import { LINKS } from "@/data/resume";
 import { openChat } from "@/components/ui/ChatWidget";
 
 const socials = [
-  { icon: Briefcase, label: "LinkedIn", sub: "The fullest picture — 500+ connections, recaps, photos", href: LINKS.linkedin, hot: true },
-  { icon: Mail, label: "Email", sub: `${LINKS.email} — I actually reply`, href: `mailto:${LINKS.email}` },
+  { icon: Briefcase, label: "LinkedIn", sub: "The fullest picture: 500+ connections, recaps, photos", href: LINKS.linkedin, hot: true },
+  { icon: Mail, label: "Email", sub: `${LINKS.email}. I actually reply`, href: `mailto:${LINKS.email}` },
   { icon: Code2, label: "GitHub", sub: "Where the weekends go", href: LINKS.github },
   { icon: FileDown, label: "Resume", sub: "One page, PDF", href: LINKS.resume, download: true },
 ];

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { SplitText } from "@/components/ui/SplitText";
 import { skills, LINKS } from "@/data/resume";
 
-const stats = [["5×", "Hackathon winner"], ["12+", "Hackathons"], ["16", "Public repos"], ["MS", "Computer Science"]];
+const stats = [["5×", "Hackathon winner"], ["20+", "Hackathons"], ["23", "Public repos"], ["MS", "Computer Science"]];
 
 export function AboutSection() {
   return (
@@ -31,10 +31,10 @@ export function AboutSection() {
               <div style={{ color: "#b7ab98", fontSize: "clamp(1rem, 1.2vw, 1.15rem)", lineHeight: 1.6, display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <p>I grew up in India and studied Information Technology in Chennai. My first real taste of building with data was an AI/ML internship at UT Dallas, then a data analyst internship at Kanini, where a document-analysis app I shipped cut manual processing time by 40%.</p>
                 <p>In January 2024 I moved to New York for my Master&rsquo;s at Binghamton, my first long stretch away from home, and worked part-time all the way through to support myself. As a Graduate Assistant I built an agentic career-planning system with Watson Career Services, which grew into EvidPath.</p>
-                <p>I graduated in May 2026 and moved to the Bay Area. Since then most of my weekends have gone to San Francisco hackathons: 12+ so far, and a five-time winner. I like problems with a real person at the end of them, like flood warnings, accessibility, and knowledge that would otherwise walk out the door. I debug to root cause and leave tests behind.</p>
+                <p>I graduated in May 2026 and moved to the Bay Area. Since then most of my weekends have gone to San Francisco hackathons: 20+ so far, and a five-time winner. I like problems with a real person at the end of them, like flood warnings, accessibility, and knowledge that would otherwise walk out the door. I debug to root cause and leave tests behind.</p>
               </div>
               <a href={LINKS.linkedin} target="_blank" rel="noopener" data-cursor-hover="true" style={{ display: "inline-flex", alignItems: "center", gap: 12, marginTop: "2rem", padding: ".9rem 1.4rem", border: "1px solid #e8a33b", borderRadius: 999, color: "#ededed", textDecoration: "none", fontWeight: 600, fontSize: ".95rem", clear: "both" }}>
-                <b style={{ background: "#e8a33b", color: "#0d0d0d", borderRadius: 6, padding: "2px 7px", fontWeight: 800 }}>in</b> See the full picture on LinkedIn — 500+ connections, hackathon recaps, photos →
+                <b style={{ background: "#e8a33b", color: "#0d0d0d", borderRadius: 6, padding: "2px 7px", fontWeight: 800 }}>in</b> See the full picture on LinkedIn: 500+ connections, hackathon recaps, photos →
               </a>
             </motion.div>
 

@@ -23,7 +23,7 @@ export function WinsSection() {
             ))}
           </div>
           <p style={{ color: "#b7ab98", maxWidth: "40rem", marginTop: "6vh", lineHeight: 1.5 }}>
-            Twelve-plus hackathons so far, mostly in San Francisco, and five wins. The rest of them, with photos, are on{" "}
+            Twenty-plus hackathons so far, mostly in San Francisco, and five wins. The rest of them, with photos, are on{" "}
             <a href={LINKS.linkedin} target="_blank" rel="noopener" data-cursor-hover="true" style={{ color: "#e8a33b", fontWeight: 600 }}>LinkedIn</a>.
           </p>
         </div>

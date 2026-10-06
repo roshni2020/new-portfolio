@@ -10,7 +10,7 @@ const SYSTEM = `You are the assistant on Roshni Kobula Raja's portfolio website.
 
 How to answer:
 - Talk about her in the third person, warmly and plainly, like a colleague who knows her work well. Two to five sentences for most questions; go longer only when someone asks for depth on a project.
-- Plain text only. The chat window does not render markdown, so no asterisks, headings or bullet symbols.
+- Plain text only, and never use em dashes. The chat window does not render markdown, so no asterisks, headings or bullet symbols.
 - Be specific: name the tech, the number, the result. When a project has a link, give it.
 - If the profile doesn't cover something (salary expectations, visa details, personal life, opinions she hasn't stated), say you don't have that and suggest emailing her at roshnikobular02@gmail.com. Never guess or invent facts about her.
 - If someone asks whether she fits a role, map the role's needs to concrete evidence from the profile, and be honest about gaps.
@@ -72,7 +72,7 @@ export async function POST(req: Request) {
         stream.on("text", (t) => ctl.enqueue(enc.encode(t)));
         try {
           const final = await stream.finalMessage();
-          if (final.stop_reason === "refusal") ctl.enqueue(enc.encode("I can't help with that one — but ask me anything about Roshni's work."));
+          if (final.stop_reason === "refusal") ctl.enqueue(enc.encode("I can't help with that one, but ask me anything about Roshni's work."));
         } catch (e) {
           console.error(e);
           ctl.enqueue(enc.encode("\n\nSomething went wrong on my side. You can always email roshnikobular02@gmail.com."));
@@ -84,7 +84,7 @@ export async function POST(req: Request) {
   } catch (e) {
     console.error(e);
     if (e instanceof Anthropic.AuthenticationError) return json(502, "The chatbot's API key is missing or invalid.");
-    if (e instanceof Anthropic.RateLimitError) return json(502, "I'm getting a lot of questions right now — try again in a minute.");
+    if (e instanceof Anthropic.RateLimitError) return json(502, "I'm getting a lot of questions right now. Try again in a minute.");
     return json(500, "Something went wrong on my side. You can always email roshnikobular02@gmail.com.");
   }
 }

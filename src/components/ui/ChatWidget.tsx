@@ -62,7 +62,7 @@ export function ChatWidget() {
             <header style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, padding: "18px 20px", borderBottom: "1px solid #2a2620" }}>
               <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
                 <img src="/avatar.jpg" alt="" style={{ width: 44, height: 44, borderRadius: "50%", objectFit: "cover", objectPosition: "50% 15%" }} />
-                <div><div style={{ fontWeight: 800, letterSpacing: ".12em", fontSize: ".85rem" }}>ROSHNI&rsquo;S AVATAR</div><small style={{ color: "#b7ab98", fontSize: ".78rem" }}>Knows her work. Can be wrong — the resume is the source of truth.</small></div>
+                <div><div style={{ fontWeight: 800, letterSpacing: ".12em", fontSize: ".85rem" }}>ROSHNI&rsquo;S AVATAR</div><small style={{ color: "#b7ab98", fontSize: ".78rem" }}>Knows her work. Can be wrong. The resume is the source of truth.</small></div>
               </div>
               <button onClick={() => setOpen(false)} aria-label="Close chat" data-cursor-hover="true" style={{ background: "none", border: 0, color: "#ededed", cursor: "pointer" }}><X size={22} /></button>
             </header>
