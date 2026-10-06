@@ -31,7 +31,7 @@ export function HeroSection({ chat }: { chat: boolean }) {
           <div style={{ overflow: "hidden" }}><SplitText text="That Work." as="h1" className="split-heading" /></div>
 
           <motion.p variants={item} style={{ marginTop: "4vh", color: "#b7ab98", fontSize: "clamp(1rem, 1.4vw, 1.25rem)", lineHeight: 1.5, maxWidth: 520 }}>
-            Software engineer — AI/ML & agentic systems. Retrieval and ranking pipelines, LangGraph agents, and the pytest suites that keep them honest. 12+ hackathons and counting.
+            Software engineer — AI/ML & agentic systems. Retrieval and ranking pipelines, LangGraph agents, and the pytest suites that keep them honest. 5× hackathon winner, 12+ hackathons and counting.
           </motion.p>
 
           <motion.div variants={item} style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "4vh" }}>
