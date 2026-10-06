@@ -26,9 +26,9 @@ export function HeroSection({ chat }: { chat: boolean }) {
           </motion.p>
           <motion.div variants={item} style={{ width: 70, height: 3, background: "#e8a33b", marginBottom: "3vh" }} />
 
-          <div style={{ overflow: "hidden" }}><SplitText text="Shipping" as="h1" className="split-heading" /></div>
-          <div style={{ overflow: "hidden" }}><SplitText text="Agents" as="h1" className="split-heading-accent" /></div>
-          <div style={{ overflow: "hidden" }}><SplitText text="That Work." as="h1" className="split-heading" /></div>
+          <div style={{ overflow: "hidden" }}><SplitText text="Building" as="h1" className="split-heading" /></div>
+          <div style={{ overflow: "hidden" }}><SplitText text="AI For" as="h1" className="split-heading-accent" /></div>
+          <div style={{ overflow: "hidden" }}><SplitText text="Real People." as="h1" className="split-heading" /></div>
 
           <motion.p variants={item} style={{ marginTop: "4vh", color: "#b7ab98", fontSize: "clamp(1rem, 1.4vw, 1.25rem)", lineHeight: 1.5, maxWidth: 520 }}>
             Software engineer in AI/ML & agentic systems. Retrieval and ranking pipelines, LangGraph agents, and the pytest suites that keep them honest. 5× hackathon winner, 20+ hackathons and counting.
